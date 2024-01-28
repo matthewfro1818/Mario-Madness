@@ -11,6 +11,7 @@ class ClientPrefs {
 	// yeah good idea? (its still stupid in the latest psych build)
 	public static var downScroll:Bool = false;
 	public static var middleScroll:Bool = false;
+	public static var Botplay:Bool = false;
 	public static var showFPS:Bool = true;
 	public static var flashing:Bool = true;
 	public static var globalAntialiasing:Bool = true;
@@ -109,6 +110,7 @@ class ClientPrefs {
 		
 		FlxG.save.data.downScroll = downScroll;
 		FlxG.save.data.middleScroll = middleScroll;
+		FlxG.save.data.botplay = Botplay;
 		FlxG.save.data.showFPS = showFPS;
 		FlxG.save.data.flashing = flashing;
 		FlxG.save.data.globalAntialiasing = globalAntialiasing;
@@ -150,6 +152,9 @@ class ClientPrefs {
 		if (FlxG.save.data.volume != null)
 			FlxG.sound.volume = FlxG.save.data.volume;
 		
+		if (FlxG.save.data.botplay != null) {
+			Botplay = FlxG.save.data.botplay;
+		}
 		if (FlxG.save.data.downScroll != null) {
 			downScroll = FlxG.save.data.downScroll;
 		}
