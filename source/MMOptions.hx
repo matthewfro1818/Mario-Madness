@@ -840,7 +840,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'Hide HUD',
 		'Hide Song Length',
 		'Flashing Lights',
-		'Camera Zooms'
+		'Camera Zooms',
+		'Botplay'
 		#if !mobile, 'FPS Counter' #end
 	];
 
@@ -1049,6 +1050,9 @@ class PreferencesSubstate extends MusicBeatSubstate
 
 					case 'Hide Song Length':
 						ClientPrefs.hideTime = !ClientPrefs.hideTime;
+
+					case 'Botplay':
+						ClientPrefs.Botplay = !ClientPrefs.Botplay;
 				}
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				reloadValues();
