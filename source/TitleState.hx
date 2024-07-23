@@ -72,7 +72,7 @@ class TitleState extends MusicBeatState {
 		}
 		
 		if (!initialized) {
-			FlxG.save.bind('funkin', 'ninjamuffin99');
+			FlxG.save.bind('Mario', 'ninjamuffin99');
 			ClientPrefs.loadPrefs();
 
 			#if CHARTING
